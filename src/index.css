@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/garet');
 
 @tailwind base;
 @tailwind components;
@@ -26,6 +27,15 @@
   font-family: 'Garet';
   src: url('https://cdn.jsdelivr.net/gh/madebyfabian/garet-typeface@1.0.0/fonts/GaretBold.ttf') format('truetype');
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Adicionando Garet Thin */
+@font-face {
+  font-family: 'Garet';
+  src: url('https://fonts.cdnfonts.com/css/garet') format('truetype');
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
@@ -82,24 +92,14 @@
     @apply bg-biodelle-offwhite text-biodelle-text font-inter;
   }
 
-  /* Aplicando uma hierarquia tipográfica refinada e delicada com a fonte Garet */
-  h1 {
+  /* Nova hierarquia tipográfica com Garet Regular para títulos e Garet Thin para subtítulos */
+  h1, h2, h3, h4, h5, h6 {
     @apply font-garet font-normal tracking-tight;
     letter-spacing: 0.01em;
   }
   
-  h2 {
-    @apply font-garet font-normal tracking-normal;
-    letter-spacing: 0.01em;
-  }
-  
-  h3 {
-    @apply font-garet font-normal;
-    letter-spacing: 0.01em;
-  }
-  
-  h4, h5, h6 {
-    @apply font-garet font-normal;
+  .subtitle {
+    @apply font-garet font-thin tracking-normal;
     letter-spacing: 0.01em;
   }
   
@@ -131,7 +131,7 @@
   }
   
   .biodelle-card {
-    @apply bg-biodelle-beige p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md;
+    @apply bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md border border-biodelle-beige/20;
   }
   
   .section-padding {
@@ -172,11 +172,11 @@
   }
   
   .text-subtitle {
-    @apply font-garet font-normal text-xl md:text-2xl leading-relaxed;
+    @apply font-garet font-thin text-xl md:text-2xl leading-relaxed;
     letter-spacing: 0.01em;
   }
   
   .text-highlight {
-    @apply font-garet font-medium;
+    @apply font-garet font-normal;
   }
 }

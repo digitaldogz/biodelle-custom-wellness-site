@@ -14,11 +14,11 @@ const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="order-2 md:order-1 animate-fade-in">
           <h1 className="text-heading-1 text-biodelle-text">
-            Sua Beleza e Saúde, <span className="text-biodelle-terracotta font-medium">ÚNICAS</span>.
+            Sua Beleza e Saúde, <span className="text-biodelle-terracotta">ÚNICAS</span>.
             <br />
             Nossas Fórmulas, <span className="text-biodelle-moss">Também</span>.
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-biodelle-text/80 font-inter max-w-xl">
+          <p className="mt-6 text-lg md:text-xl text-biodelle-text/80 font-garet font-thin max-w-xl">
             Descubra dermocosméticos e suplementos criados sob medida para seus objetivos, 
             com a pureza e precisão que você merece.
           </p>

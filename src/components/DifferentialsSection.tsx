@@ -32,19 +32,29 @@ const DifferentialsSection: React.FC = () => {
         <h2 className="text-heading-2 text-center mb-4">
           O Cuidado que Transforma. A Precisão que Você Confia.
         </h2>
-        <p className="text-center text-biodelle-text/70 max-w-2xl mx-auto mb-12">
-          Descubra o que torna a Biodelle única e como nosso compromisso com a excelência se traduz em cada fórmula personalizada.
+        <p className="text-subtitle text-center text-biodelle-text/70 max-w-2xl mx-auto mb-12">
+          Descubra o que torna a Biodelle única e como nosso compromisso com a excelência 
+          se traduz em cada fórmula personalizada.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {cards.map((card, index) => (
             <div 
               key={index} 
-              className="biodelle-card hover:-translate-y-1"
+              className="bg-white border border-biodelle-beige/20 shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
             >
-              <div className="mb-4">{card.icon}</div>
-              <h3 className="text-xl font-garet font-normal mb-3 text-biodelle-text tracking-wide">{card.title}</h3>
-              <p className="text-biodelle-text/70">{card.description}</p>
+              <div className="h-2 bg-gradient-to-r from-biodelle-terracotta to-biodelle-moss"></div>
+              <div className="p-8">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-biodelle-offwhite mb-5 group-hover:scale-105 transition-transform">
+                  {card.icon}
+                </div>
+                <h3 className="text-xl font-garet font-normal mb-3 text-biodelle-text tracking-wide">
+                  {card.title}
+                </h3>
+                <p className="text-biodelle-text/70 font-inter">
+                  {card.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

@@ -118,14 +118,6 @@ export default {
 				garet: ['Garet', 'serif'],
 				inter: ['Inter', 'sans-serif'],
 			},
-			fontWeight: {
-				light: '300',
-				normal: '400',
-				medium: '500',
-				semibold: '600',
-				bold: '700',
-				extrabold: '800',
-			},
 			letterSpacing: {
 				tightest: '-.075em',
 				tighter: '-.05em',

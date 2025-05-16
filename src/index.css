@@ -5,15 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Carregando a família completa de fontes Garet com todos os pesos disponíveis */
-@font-face {
-  font-family: 'Garet';
-  src: url('https://cdn.jsdelivr.net/gh/madebyfabian/garet-typeface@1.0.0/fonts/GaretLight.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* Redefinindo os imports da Garet para garantir todos os pesos estejam disponíveis */
 @font-face {
   font-family: 'Garet';
   src: url('https://cdn.jsdelivr.net/gh/madebyfabian/garet-typeface@1.0.0/fonts/GaretBook.ttf') format('truetype');
@@ -32,24 +24,8 @@
 
 @font-face {
   font-family: 'Garet';
-  src: url('https://cdn.jsdelivr.net/gh/madebyfabian/garet-typeface@1.0.0/fonts/GaretHeavy.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Garet';
   src: url('https://cdn.jsdelivr.net/gh/madebyfabian/garet-typeface@1.0.0/fonts/GaretBold.ttf') format('truetype');
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Garet';
-  src: url('https://cdn.jsdelivr.net/gh/madebyfabian/garet-typeface@1.0.0/fonts/GaretExtraBold.ttf') format('truetype');
-  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -133,7 +109,51 @@
 }
 
 @layer components {
-  /* ... keep existing code (custom component classes like biodelle-btn-primary, biodelle-card, etc.) */
+  .biodelle-btn-primary {
+    @apply bg-biodelle-terracotta text-white px-6 py-3 rounded-md font-inter font-medium tracking-wide
+           transition-all duration-200 ease-in-out
+           hover:scale-[1.02] hover:shadow-md hover:bg-[#9B7370]
+           active:scale-[0.98] active:shadow-sm;
+  }
+  
+  .biodelle-btn-secondary {
+    @apply bg-biodelle-moss text-white px-6 py-3 rounded-md font-inter font-medium tracking-wide
+           transition-all duration-200 ease-in-out
+           hover:scale-[1.02] hover:shadow-md hover:bg-[#575A41]
+           active:scale-[0.98] active:shadow-sm;
+  }
+  
+  .biodelle-btn-outline {
+    @apply border-2 border-biodelle-moss text-biodelle-moss px-6 py-[10px] rounded-md font-inter font-medium tracking-wide
+           transition-all duration-200 ease-in-out
+           hover:bg-biodelle-moss hover:text-white hover:scale-[1.02]
+           active:scale-[0.98];
+  }
+  
+  .biodelle-card {
+    @apply bg-biodelle-beige p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-20 px-4 md:px-8;
+  }
+  
+  .quiz-option {
+    @apply border-2 border-gray-200 p-4 rounded-lg flex items-center gap-4 cursor-pointer
+           transition-all duration-200 ease-in-out
+           hover:border-biodelle-terracotta hover:bg-biodelle-offwhite
+           data-[selected=true]:border-biodelle-terracotta data-[selected=true]:bg-biodelle-offwhite;
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
   
   /* Classes tipográficas refinadas para a hierarquia da Biodelle */
   .text-heading-1 {
@@ -158,30 +178,5 @@
   
   .text-highlight {
     @apply font-garet font-medium;
-  }
-
-  /* Classes adicionais específicas para cada peso da Garet */
-  .font-garet-light {
-    @apply font-garet font-light;
-  }
-  
-  .font-garet-normal {
-    @apply font-garet font-normal;
-  }
-  
-  .font-garet-medium {
-    @apply font-garet font-medium;
-  }
-  
-  .font-garet-semibold {
-    @apply font-garet font-semibold;
-  }
-  
-  .font-garet-bold {
-    @apply font-garet font-bold;
-  }
-  
-  .font-garet-extrabold {
-    @apply font-garet font-extrabold;
   }
 }

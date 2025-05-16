@@ -115,8 +115,18 @@ export default {
 				'slide-out': 'slide-out 0.3s ease-out'
 			},
 			fontFamily: {
-				garet: ['Garet', 'sans-serif'],
+				garet: ['Garet', 'serif'],
 				inter: ['Inter', 'sans-serif'],
+			},
+			letterSpacing: {
+				tightest: '-.075em',
+				tighter: '-.05em',
+				tight: '-.025em',
+				normal: '0',
+				wide: '.025em',
+				wider: '.05em',
+				widest: '.1em',
+				garet: '-.01em',
 			},
 		}
 	},

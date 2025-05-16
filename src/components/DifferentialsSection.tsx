@@ -29,7 +29,7 @@ const DifferentialsSection: React.FC = () => {
   return (
     <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-garet font-bold text-center mb-4">
+        <h2 className="text-heading-2 text-center mb-4">
           O Cuidado que Transforma. A Precisão que Você Confia.
         </h2>
         <p className="text-center text-biodelle-text/70 max-w-2xl mx-auto mb-12">
@@ -43,7 +43,7 @@ const DifferentialsSection: React.FC = () => {
               className="biodelle-card hover:-translate-y-1"
             >
               <div className="mb-4">{card.icon}</div>
-              <h3 className="text-xl font-inter font-medium mb-3 text-biodelle-text">{card.title}</h3>
+              <h3 className="text-xl font-garet font-medium mb-3 text-biodelle-text">{card.title}</h3>
               <p className="text-biodelle-text/70">{card.description}</p>
             </div>
           ))}

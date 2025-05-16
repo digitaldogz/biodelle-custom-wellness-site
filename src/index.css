@@ -5,6 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Redefinindo os imports da Garet para garantir todos os pesos estejam disponíveis */
 @font-face {
   font-family: 'Garet';
   src: url('https://cdn.jsdelivr.net/gh/madebyfabian/garet-typeface@1.0.0/fonts/GaretBook.ttf') format('truetype');
@@ -81,12 +82,25 @@
     @apply bg-biodelle-offwhite text-biodelle-text font-inter;
   }
 
-  h1, h2, h3 {
-    @apply font-garet;
+  /* Aplicando corretamente a hierarquia tipográfica com a fonte Garet */
+  h1 {
+    @apply font-garet font-bold tracking-tight;
+  }
+  
+  h2 {
+    @apply font-garet font-semibold tracking-normal;
+  }
+  
+  h3 {
+    @apply font-garet font-medium;
   }
   
   h4, h5, h6 {
-    @apply font-inter font-medium;
+    @apply font-garet font-normal;
+  }
+  
+  p {
+    @apply font-inter;
   }
 }
 
@@ -135,5 +149,26 @@
   
   .hide-scrollbar::-webkit-scrollbar {
     display: none;  /* Chrome, Safari and Opera */
+  }
+  
+  /* Classes tipográficas específicas para a hierarquia da Biodelle */
+  .text-heading-1 {
+    @apply font-garet font-bold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight;
+  }
+  
+  .text-heading-2 {
+    @apply font-garet font-bold text-3xl md:text-4xl leading-snug tracking-normal;
+  }
+  
+  .text-heading-3 {
+    @apply font-garet font-medium text-2xl md:text-3xl leading-relaxed;
+  }
+  
+  .text-subtitle {
+    @apply font-garet font-normal text-xl md:text-2xl leading-relaxed;
+  }
+  
+  .text-highlight {
+    @apply font-garet font-medium;
   }
 }

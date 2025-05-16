@@ -127,6 +127,8 @@ export default {
 				wider: '.05em',
 				widest: '.1em',
 				garet: '-.01em',
+				'extra-wide': '.075em',
+				'super-wide': '.1em',
 			},
 		}
 	},

@@ -43,7 +43,7 @@ const DifferentialsSection: React.FC = () => {
               className="biodelle-card hover:-translate-y-1"
             >
               <div className="mb-4">{card.icon}</div>
-              <h3 className="text-xl font-garet font-medium mb-3 text-biodelle-text">{card.title}</h3>
+              <h3 className="text-xl font-garet font-normal mb-3 text-biodelle-text tracking-wide">{card.title}</h3>
               <p className="text-biodelle-text/70">{card.description}</p>
             </div>
           ))}

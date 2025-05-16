@@ -43,7 +43,7 @@ const BlogSection: React.FC = () => {
   return (
     <section id="blog" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-garet font-bold text-center mb-4">
+        <h2 className="text-heading-2 text-center mb-4">
           Mantenha-se Informado, Viva Melhor.
         </h2>
         <p className="text-center text-biodelle-text/70 max-w-2xl mx-auto mb-12">
@@ -58,7 +58,7 @@ const BlogSection: React.FC = () => {
                 <span className="text-xs uppercase tracking-wider font-medium text-biodelle-terracotta bg-biodelle-terracotta/10 px-3 py-1 rounded-full">
                   {post.category}
                 </span>
-                <h3 className="text-xl font-medium mt-3 mb-2">
+                <h3 className="text-xl font-garet font-normal mt-3 mb-2 tracking-wide">
                   {post.title}
                 </h3>
                 <p className="text-biodelle-text/70 text-sm mb-4">

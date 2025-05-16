@@ -102,7 +102,7 @@ const QuizSection: React.FC = () => {
   return (
     <section id="quiz-section" className="section-padding bg-biodelle-offwhite">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-garet font-bold text-center mb-4">
+        <h2 className="text-heading-2 text-center mb-4">
           Sua Jornada de Bem-Estar Começa Aqui.
         </h2>
         <p className="text-center text-biodelle-text/70 max-w-2xl mx-auto mb-12">
@@ -127,7 +127,7 @@ const QuizSection: React.FC = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-garet font-bold mb-3">Obrigado por compartilhar suas informações!</h3>
+                <h3 className="text-2xl font-garet font-normal mb-3 tracking-wide">Obrigado por compartilhar suas informações!</h3>
                 <p className="text-biodelle-text/70 max-w-md mx-auto">
                   Em breve, um de nossos especialistas entrará em contato via WhatsApp 
                   para fornecer sua análise personalizada.
@@ -140,7 +140,7 @@ const QuizSection: React.FC = () => {
                   "transition-all duration-300 ease-in-out",
                   currentStep === 1 ? "animate-scale-in" : "hidden"
                 )}>
-                  <h3 className="text-xl md:text-2xl font-garet mb-6">
+                  <h3 className="text-xl md:text-2xl font-garet font-normal mb-6 tracking-wide">
                     Qual seu principal objetivo hoje?
                   </h3>
                   <div className="space-y-4">
@@ -169,7 +169,7 @@ const QuizSection: React.FC = () => {
                   "transition-all duration-300 ease-in-out",
                   currentStep === 2 ? "animate-scale-in" : "hidden"
                 )}>
-                  <h3 className="text-xl md:text-2xl font-garet mb-6">
+                  <h3 className="text-xl md:text-2xl font-garet font-normal mb-6 tracking-wide">
                     Você já utiliza algum suplemento ou dermocosmético?
                   </h3>
                   <div className="space-y-4">
@@ -214,7 +214,7 @@ const QuizSection: React.FC = () => {
                   "transition-all duration-300 ease-in-out",
                   currentStep === 3 ? "animate-scale-in" : "hidden"
                 )}>
-                  <h3 className="text-xl md:text-2xl font-garet mb-6">
+                  <h3 className="text-xl md:text-2xl font-garet font-normal mb-6 tracking-wide">
                     Restrições e Informações para Contato
                   </h3>
                   

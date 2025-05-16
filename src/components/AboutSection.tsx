@@ -5,14 +5,14 @@ const AboutSection: React.FC = () => {
   return (
     <section id="about" className="section-padding bg-biodelle-offwhite">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-garet font-bold text-center mb-4">
+        <h2 className="text-heading-2 text-center mb-4">
           Ciência e Paixão em Cada Detalhe
         </h2>
         
         <div className="grid md:grid-cols-2 gap-12 mt-12">
           {/* The Specialists */}
           <div className="bg-white p-8 rounded-lg shadow-sm">
-            <h3 className="text-2xl font-garet font-medium mb-6 text-biodelle-moss">
+            <h3 className="text-2xl font-garet font-normal mb-6 text-biodelle-moss tracking-wide">
               Os Especialistas
             </h3>
             
@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
                 <div className="aspect-square bg-biodelle-beige/50 rounded-lg mb-3 flex items-center justify-center">
                   <span className="text-5xl text-biodelle-terracotta/30 font-garet">F</span>
                 </div>
-                <h4 className="text-lg font-medium">Fernanda Silva</h4>
+                <h4 className="text-lg font-garet font-normal">Fernanda Silva</h4>
                 <p className="text-sm text-biodelle-text/70">Farmacêutica CRF 12345</p>
               </div>
               
@@ -29,7 +29,7 @@ const AboutSection: React.FC = () => {
                 <div className="aspect-square bg-biodelle-beige/50 rounded-lg mb-3 flex items-center justify-center">
                   <span className="text-5xl text-biodelle-moss/30 font-garet">R</span>
                 </div>
-                <h4 className="text-lg font-medium">Roberto Santos</h4>
+                <h4 className="text-lg font-garet font-normal">Roberto Santos</h4>
                 <p className="text-sm text-biodelle-text/70">Farmacêutico CRF 67890</p>
               </div>
             </div>
@@ -48,7 +48,7 @@ const AboutSection: React.FC = () => {
           
           {/* The Process */}
           <div className="bg-white p-8 rounded-lg shadow-sm">
-            <h3 className="text-2xl font-garet font-medium mb-6 text-biodelle-moss">
+            <h3 className="text-2xl font-garet font-normal mb-6 text-biodelle-moss tracking-wide">
               Nosso Processo de Manipulação
             </h3>
             

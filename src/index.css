@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -81,21 +82,25 @@
     @apply bg-biodelle-offwhite text-biodelle-text font-inter;
   }
 
-  /* Aplicando uma hierarquia tipográfica mais refinada e delicada com a fonte Garet */
+  /* Aplicando uma hierarquia tipográfica refinada e delicada com a fonte Garet */
   h1 {
     @apply font-garet font-normal tracking-tight;
+    letter-spacing: 0.01em;
   }
   
   h2 {
     @apply font-garet font-normal tracking-normal;
+    letter-spacing: 0.01em;
   }
   
   h3 {
     @apply font-garet font-normal;
+    letter-spacing: 0.01em;
   }
   
   h4, h5, h6 {
     @apply font-garet font-normal;
+    letter-spacing: 0.01em;
   }
   
   p {
@@ -152,19 +157,23 @@
   
   /* Classes tipográficas refinadas para a hierarquia da Biodelle */
   .text-heading-1 {
-    @apply font-garet font-normal text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wider;
+    @apply font-garet font-normal text-4xl md:text-5xl lg:text-6xl leading-tight;
+    letter-spacing: 0.02em;
   }
   
   .text-heading-2 {
-    @apply font-garet font-normal text-3xl md:text-4xl leading-snug tracking-wide;
+    @apply font-garet font-normal text-3xl md:text-4xl leading-snug;
+    letter-spacing: 0.015em;
   }
   
   .text-heading-3 {
-    @apply font-garet font-normal text-2xl md:text-3xl leading-relaxed tracking-wide;
+    @apply font-garet font-normal text-2xl md:text-3xl leading-relaxed;
+    letter-spacing: 0.01em;
   }
   
   .text-subtitle {
     @apply font-garet font-normal text-xl md:text-2xl leading-relaxed;
+    letter-spacing: 0.01em;
   }
   
   .text-highlight {

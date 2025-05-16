@@ -115,7 +115,7 @@ const SolutionsSection: React.FC = () => {
   return (
     <section id="solutions" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-garet font-bold text-center mb-4">
+        <h2 className="text-heading-2 text-center mb-4">
           Soluções Personalizadas para Cada Necessidade
         </h2>
         <p className="text-center text-biodelle-text/70 max-w-2xl mx-auto mb-12">
@@ -152,11 +152,11 @@ const SolutionsSection: React.FC = () => {
                 <div className="rounded-lg overflow-hidden shadow-md h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <div className={cn("h-40 bg-gradient-to-br", getGradientStyle(solution.image))}>
                     <div className="h-full flex items-center justify-center">
-                      <span className="font-garet text-white/30 text-xl">{solution.title}</span>
+                      <span className="font-garet text-white/30 text-xl tracking-wide">{solution.title}</span>
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-inter font-medium mb-3 text-biodelle-text">{solution.title}</h3>
+                    <h3 className="text-xl font-garet font-normal mb-3 text-biodelle-text tracking-wide">{solution.title}</h3>
                     <p className="text-biodelle-text/70 mb-4">{solution.description}</p>
                     <div className="mt-auto">
                       <button className="text-biodelle-terracotta font-medium flex items-center transition-all hover:underline">

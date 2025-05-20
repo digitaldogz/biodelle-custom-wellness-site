@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { blogPosts } from '@/components/BlogSection';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import { WhatsApp } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -178,7 +177,7 @@ const BlogPost: React.FC = () => {
                   type="submit"
                   className="biodelle-btn-primary w-full flex items-center justify-center gap-2"
                 >
-                  <WhatsApp size={20} />
+                  <MessageSquare size={20} />
                   Iniciar Conversa pelo WhatsApp
                 </button>
               </form>

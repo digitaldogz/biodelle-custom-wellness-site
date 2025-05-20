@@ -1,0 +1,513 @@
+
+/*
+Theme Name: Biodelle
+Theme URI: https://biodelle.com
+Author: Biodelle
+Author URI: https://biodelle.com
+Description: Tema personalizado para a Biodelle - Fórmulas Personalizadas para Saúde e Beleza
+Version: 1.0
+Text Domain: biodelle
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/garet');
+
+/* Redefinindo os imports da Garet para garantir todos os pesos estejam disponíveis */
+@font-face {
+  font-family: 'Garet';
+  src: url('https://cdn.jsdelivr.net/gh/madebyfabian/garet-typeface@1.0.0/fonts/GaretBook.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garet';
+  src: url('https://cdn.jsdelivr.net/gh/madebyfabian/garet-typeface@1.0.0/fonts/GaretMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garet';
+  src: url('https://cdn.jsdelivr.net/gh/madebyfabian/garet-typeface@1.0.0/fonts/GaretBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Adicionando Garet Thin */
+@font-face {
+  font-family: 'Garet';
+  src: url('https://fonts.cdnfonts.com/css/garet') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cores da Biodelle */
+:root {
+  --biodelle-terracotta: #AB7E79;
+  --biodelle-moss: #65684E;
+  --biodelle-offwhite: #EFEEEE;
+  --biodelle-beige: #DAC0A7;
+  --biodelle-text: #333333;
+}
+
+/* Estilos base */
+body {
+  background-color: var(--biodelle-offwhite);
+  color: var(--biodelle-text);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Garet', serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.subtitle {
+  font-family: 'Garet', serif;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+}
+
+/* Botões */
+.biodelle-btn-primary {
+  background-color: var(--biodelle-terracotta);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.biodelle-btn-primary:hover {
+  background-color: #9B7370;
+  transform: scale(1.02);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.biodelle-btn-secondary {
+  background-color: var(--biodelle-moss);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.biodelle-btn-secondary:hover {
+  background-color: #575A41;
+  transform: scale(1.02);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.biodelle-btn-outline {
+  border: 2px solid var(--biodelle-moss);
+  color: var(--biodelle-moss);
+  background-color: transparent;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.biodelle-btn-outline:hover {
+  background-color: var(--biodelle-moss);
+  color: white;
+  transform: scale(1.02);
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 24px;
+  transition: all 0.3s;
+}
+
+.site-header.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 12px 24px;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  font-size: 24px;
+  font-family: 'Garet', serif;
+  font-weight: 400;
+}
+
+.site-logo .terracotta {
+  color: var(--biodelle-terracotta);
+}
+
+.site-logo .moss {
+  color: var(--biodelle-moss);
+}
+
+.main-navigation {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.main-navigation a {
+  font-family: 'Inter', sans-serif;
+  color: var(--biodelle-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.main-navigation a:hover {
+  color: var(--biodelle-terracotta);
+}
+
+/* Hero section */
+.hero-section {
+  padding-top: 128px;
+  padding-bottom: 80px;
+  background: linear-gradient(to bottom, var(--biodelle-offwhite), white);
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content {
+    order: 2;
+  }
+  
+  .hero-image {
+    order: 1;
+  }
+}
+
+.hero-heading {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 36px;
+  }
+}
+
+.hero-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(51, 51, 51, 0.8);
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+/* Sections */
+.section {
+  padding: 64px 24px;
+}
+
+.section-white {
+  background-color: white;
+}
+
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  text-align: center;
+  color: rgba(51, 51, 51, 0.7);
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* Card */
+.biodelle-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(218, 192, 167, 0.2);
+  transition: all 0.3s;
+}
+
+.biodelle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.blog-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+  height: 200px;
+  background: linear-gradient(135deg, rgba(171, 126, 121, 0.4), rgba(101, 104, 78, 0.3));
+}
+
+.blog-content {
+  padding: 24px;
+}
+
+.blog-category {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: var(--biodelle-terracotta);
+  background-color: rgba(171, 126, 121, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.blog-title {
+  font-size: 20px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.blog-excerpt {
+  color: rgba(51, 51, 51, 0.7);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.blog-link {
+  color: var(--biodelle-terracotta);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.blog-link:hover {
+  text-decoration: underline;
+}
+
+.blog-link svg {
+  margin-left: 4px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: white;
+  padding: 64px 24px 32px;
+  color: var(--biodelle-text);
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-family: 'Garet', serif;
+  margin-bottom: 16px;
+}
+
+.footer-description {
+  max-width: 300px;
+  margin-bottom: 24px;
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: rgba(51, 51, 51, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--biodelle-terracotta);
+}
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 48px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(51, 51, 51, 0.1);
+  text-align: center;
+  color: rgba(51, 51, 51, 0.6);
+  font-size: 14px;
+}
+
+/* Blog Content */
+.blog-content h2 {
+  font-family: 'Garet', sans-serif;
+  font-weight: normal;
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+.blog-content h3 {
+  font-family: 'Garet', sans-serif;
+  font-weight: normal;
+  font-size: 1.35rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #65684E;
+}
+
+.blog-content p {
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: rgba(51, 51, 51, 0.8);
+}
+
+@media (min-width: 768px) {
+  .blog-content h2 {
+    font-size: 2rem;
+  }
+  
+  .blog-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* WordPress Specific Styles */
+.wp-block-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.alignwide {
+  margin-left: -10%;
+  margin-right: -10%;
+  max-width: 120%;
+}
+
+.alignfull {
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  max-width: 100vw;
+}
+
+.wp-block-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blocks-gallery-item {
+  margin: 0 16px 16px 0;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-width: 200px;
+}
+
+.wp-block-quote {
+  border-left: 4px solid var(--biodelle-terracotta);
+  padding-left: 16px;
+  margin-left: 0;
+  font-style: italic;
+  color: rgba(51, 51, 51, 0.8);
+}

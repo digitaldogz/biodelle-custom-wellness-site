@@ -115,10 +115,10 @@ const SolutionsSection: React.FC = () => {
   return (
     <section id="solutions" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-heading-2 text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-garet font-bold text-center mb-4">
           Soluções Personalizadas para Cada Necessidade
         </h2>
-        <p className="text-subtitle text-center text-biodelle-text/70 max-w-2xl mx-auto mb-12">
+        <p className="text-center text-biodelle-text/70 max-w-2xl mx-auto mb-12">
           Conheça algumas das linhas de produtos que podemos personalizar especialmente para você.
         </p>
         
@@ -149,19 +149,19 @@ const SolutionsSection: React.FC = () => {
                 key={solution.id}
                 className="min-w-[300px] w-[300px] md:min-w-[320px] md:w-[320px] snap-start flex-shrink-0 mx-2"
               >
-                <div className="rounded-xl overflow-hidden shadow-md h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-white border border-biodelle-beige/10">
+                <div className="rounded-lg overflow-hidden shadow-md h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <div className={cn("h-40 bg-gradient-to-br", getGradientStyle(solution.image))}>
                     <div className="h-full flex items-center justify-center">
-                      <span className="font-garet font-thin text-white/40 text-xl tracking-wide">{solution.title}</span>
+                      <span className="font-garet text-white/30 text-xl">{solution.title}</span>
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-garet font-normal mb-3 text-biodelle-text tracking-wide">{solution.title}</h3>
-                    <p className="text-biodelle-text/70 mb-4 font-inter">{solution.description}</p>
+                    <h3 className="text-xl font-inter font-medium mb-3 text-biodelle-text">{solution.title}</h3>
+                    <p className="text-biodelle-text/70 mb-4">{solution.description}</p>
                     <div className="mt-auto">
-                      <button className="text-biodelle-terracotta font-medium flex items-center transition-all hover:underline group">
+                      <button className="text-biodelle-terracotta font-medium flex items-center transition-all hover:underline">
                         Saiba Mais
-                        <svg className="ml-1 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="ml-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M5 12h14"></path>
                           <path d="M12 5l7 7-7 7"></path>
                         </svg>

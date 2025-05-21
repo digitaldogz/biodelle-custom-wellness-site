@@ -15,14 +15,6 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToQuiz = () => {
-    const quizSection = document.getElementById('quiz-section');
-    if (quizSection) {
-      quizSection.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMobileMenuOpen(false);
-  };
-
   return (
     <header 
       className={cn(
@@ -52,12 +44,6 @@ const Header: React.FC = () => {
           <a href="#blog" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
             Blog
           </a>
-          <button 
-            onClick={scrollToQuiz}
-            className="biodelle-btn-primary"
-          >
-            Iniciar Quiz
-          </button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -112,12 +98,6 @@ const Header: React.FC = () => {
             >
               Blog
             </a>
-            <button 
-              onClick={scrollToQuiz}
-              className="biodelle-btn-primary w-full"
-            >
-              Iniciar Quiz
-            </button>
           </nav>
         </div>
       )}

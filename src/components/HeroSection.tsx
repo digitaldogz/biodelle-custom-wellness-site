@@ -2,13 +2,6 @@
 import React from 'react';
 
 const HeroSection: React.FC = () => {
-  const scrollToQuiz = () => {
-    const quizSection = document.getElementById('quiz-section');
-    if (quizSection) {
-      quizSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-4 bg-gradient-to-b from-biodelle-offwhite to-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -23,12 +16,6 @@ const HeroSection: React.FC = () => {
             com a pureza e precisão que você merece.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <button 
-              onClick={scrollToQuiz}
-              className="biodelle-btn-primary"
-            >
-              Iniciar Meu Quiz de Personalização
-            </button>
             <a 
               href="#about"
               className="biodelle-btn-outline text-center"

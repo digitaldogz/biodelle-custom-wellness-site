@@ -5,23 +5,33 @@ import { MessageSquare } from 'lucide-react';
 interface WhatsAppButtonProps {
   phoneNumber: string;
   message?: string;
+  fixed?: boolean; // Nova propriedade para controlar se o botão é fixo ou não
 }
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ 
   phoneNumber,
-  message = "Olá! Gostaria de mais informações sobre os produtos da Biodelle."
+  message = "Olá! Gostaria de mais informações sobre os produtos da Biodelle.",
+  fixed = true // Por padrão, mantemos o botão fixo
 }) => {
   const formattedPhoneNumber = phoneNumber.replace(/\D/g, '');
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${formattedPhoneNumber}?text=${encodedMessage}`;
 
+  // Classe base do botão
+  const buttonClasses = "flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-lg hover:scale-105 transition-transform duration-300 group";
+  
+  // Container classe baseado na propriedade fixed
+  const containerClasses = fixed 
+    ? "fixed bottom-6 right-6 z-50" 
+    : "flex justify-center my-8";
+
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className={containerClasses}>
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-lg hover:scale-105 transition-transform duration-300 group"
+        className={buttonClasses}
         aria-label="Contato via WhatsApp"
       >
         <MessageSquare className="w-8 h-8 text-white" />

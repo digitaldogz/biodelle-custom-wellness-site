@@ -194,11 +194,14 @@ const BlogPost = () => {
               </a>
             </div>
           </div>
+          
+          {/* Botão do WhatsApp não fixo */}
+          <WhatsAppButton phoneNumber="5511999999999" fixed={false} />
         </div>
       </main>
       
       <Footer />
-      <WhatsAppButton phoneNumber="5511999999999" />
+      <WhatsAppButton phoneNumber="5511999999999" fixed={true} />
     </div>
   );
 };

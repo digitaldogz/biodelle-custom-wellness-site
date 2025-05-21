@@ -19,7 +19,7 @@ const Index = () => {
       <AboutSection />
       <BlogSection />
       <Footer />
-      <WhatsAppButton phoneNumber="5511999999999" />
+      <WhatsAppButton phoneNumber="5511999999999" fixed={true} />
     </div>
   );
 };

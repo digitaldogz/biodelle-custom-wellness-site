@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const blogPosts = [
   {
@@ -64,8 +65,8 @@ const BlogSection: React.FC = () => {
                 <p className="text-biodelle-text/70 text-sm mb-4">
                   {post.excerpt}
                 </p>
-                <a 
-                  href="#" 
+                <Link 
+                  to={`/blog-post/${post.id}`}
                   className="text-biodelle-terracotta font-medium inline-flex items-center transition-all hover:underline"
                 >
                   Ler Artigo 
@@ -73,16 +74,16 @@ const BlogSection: React.FC = () => {
                     <path d="M5 12h14"></path>
                     <path d="M12 5l7 7-7 7"></path>
                   </svg>
-                </a>
+                </Link>
               </div>
             </article>
           ))}
         </div>
         
         <div className="mt-10 text-center">
-          <a href="#" className="biodelle-btn-outline inline-block">
+          <Link to="/blog" className="biodelle-btn-outline inline-block">
             Ver Todos os Artigos
-          </a>
+          </Link>
         </div>
       </div>
     </section>

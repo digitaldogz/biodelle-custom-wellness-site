@@ -7,6 +7,7 @@ import SolutionsSection from "@/components/SolutionsSection";
 import AboutSection from "@/components/AboutSection";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <AboutSection />
       <BlogSection />
       <Footer />
+      <WhatsAppButton phoneNumber="5511999999999" />
     </div>
   );
 };

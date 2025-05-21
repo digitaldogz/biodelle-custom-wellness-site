@@ -1,10 +1,10 @@
-
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ChevronRight } from "lucide-react";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Dados de exemplo para postagens de blog
 const blogPosts = [
@@ -190,6 +190,7 @@ const Blog = () => {
       </main>
       
       <Footer />
+      <WhatsAppButton phoneNumber="5511999999999" />
     </div>
   );
 };

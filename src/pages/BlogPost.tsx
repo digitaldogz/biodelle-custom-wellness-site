@@ -1,9 +1,9 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, MessageSquare } from "lucide-react";
 import { useParams } from "react-router-dom";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Dados de exemplo para postagens de blog
 const blogPosts = [
@@ -198,6 +198,7 @@ const BlogPost = () => {
       </main>
       
       <Footer />
+      <WhatsAppButton phoneNumber="5511999999999" />
     </div>
   );
 };

@@ -18,8 +18,12 @@ const Index = () => {
       <SolutionsSection />
       <AboutSection />
       <BlogSection />
+      <div className="bg-white pt-4 pb-12">
+        <div className="max-w-7xl mx-auto">
+          <WhatsAppButton phoneNumber="5511999999999" />
+        </div>
+      </div>
       <Footer />
-      <WhatsAppButton phoneNumber="5511999999999" fixed={true} />
     </div>
   );
 };

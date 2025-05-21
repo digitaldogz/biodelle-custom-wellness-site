@@ -4,7 +4,6 @@ import { Pagination, PaginationContent, PaginationItem, PaginationLink, Paginati
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ChevronRight } from "lucide-react";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Dados de exemplo para postagens de blog
 const blogPosts = [
@@ -186,14 +185,10 @@ const Blog = () => {
               </PaginationContent>
             </Pagination>
           )}
-          
-          {/* Botão do WhatsApp não fixo */}
-          <WhatsAppButton phoneNumber="5511999999999" fixed={false} />
         </div>
       </main>
       
       <Footer />
-      <WhatsAppButton phoneNumber="5511999999999" fixed={true} />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,25 +26,25 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="#" className="text-3xl font-garet font-bold text-biodelle-moss">
+          <Link to="/" className="text-3xl font-garet font-bold text-biodelle-moss">
             <span className="text-biodelle-terracotta">B</span>iodelle
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
+          <Link to="/" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
             Início
-          </a>
+          </Link>
           <a href="#about" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
             Sobre Nós
           </a>
           <a href="#solutions" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
             Nossas Linhas
           </a>
-          <a href="#blog" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
+          <Link to="/blog" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
             Blog
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -70,13 +71,13 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-md p-4 animate-fade-in">
           <nav className="flex flex-col space-y-4">
-            <a 
-              href="#" 
+            <Link 
+              to="/" 
               className="font-inter text-biodelle-text py-2 px-4 hover:bg-biodelle-offwhite rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Início
-            </a>
+            </Link>
             <a 
               href="#about" 
               className="font-inter text-biodelle-text py-2 px-4 hover:bg-biodelle-offwhite rounded-md transition-colors"
@@ -91,13 +92,13 @@ const Header: React.FC = () => {
             >
               Nossas Linhas
             </a>
-            <a 
-              href="#blog" 
+            <Link 
+              to="/blog" 
               className="font-inter text-biodelle-text py-2 px-4 hover:bg-biodelle-offwhite rounded-md transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Blog
-            </a>
+            </Link>
           </nav>
         </div>
       )}

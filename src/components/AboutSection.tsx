@@ -40,10 +40,6 @@ const AboutSection: React.FC = () => {
               de formulações personalizadas, Fernanda e Roberto unem ciência e arte para criar 
               soluções únicas que atendem às suas necessidades específicas.
             </p>
-            
-            <a href="#" className="mt-4 inline-block text-biodelle-terracotta font-medium transition-all hover:underline">
-              Saiba mais sobre nós →
-            </a>
           </div>
           
           {/* The Process */}

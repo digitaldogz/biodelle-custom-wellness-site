@@ -158,15 +158,6 @@ const SolutionsSection: React.FC = () => {
                   <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-inter font-medium mb-3 text-biodelle-text">{solution.title}</h3>
                     <p className="text-biodelle-text/70 mb-4">{solution.description}</p>
-                    <div className="mt-auto">
-                      <button className="text-biodelle-terracotta font-medium flex items-center transition-all hover:underline">
-                        Saiba Mais
-                        <svg className="ml-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M5 12h14"></path>
-                          <path d="M12 5l7 7-7 7"></path>
-                        </svg>
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>

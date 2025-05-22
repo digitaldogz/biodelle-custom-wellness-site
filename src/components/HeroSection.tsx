@@ -2,6 +2,10 @@
 import React from 'react';
 
 const HeroSection: React.FC = () => {
+  // Em um cenário WordPress, esta imagem seria carregada dinamicamente 
+  // do Media Library via ACF ou campo personalizado
+  const heroImage = '/lovable-uploads/f4d60e13-693f-4833-9667-753e45699a0e.png';
+
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-4 bg-gradient-to-b from-biodelle-offwhite to-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -32,14 +36,18 @@ const HeroSection: React.FC = () => {
         
         <div className="order-1 md:order-2 flex justify-center">
           <div className="relative w-full h-80 md:h-[450px]">
-            {/* Here we'd ideally have a proper video or high-quality image */}
-            <div className="absolute w-full h-full bg-gradient-to-br from-biodelle-terracotta/20 to-biodelle-moss/20 rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center text-biodelle-moss/30 text-6xl font-garet font-bold">
-                Biodelle
-              </div>
+            {/* Imagem principal do Hero */}
+            <div className="absolute w-full h-full rounded-2xl overflow-hidden">
+              {/* Esta div será substituída por um campo de mídia no WordPress */}
+              <img 
+                src={heroImage} 
+                alt="Biodelle - Fórmulas Personalizadas" 
+                className="w-full h-full object-cover object-center"
+              />
             </div>
-            {/* SVG overlay design to make the placeholder look more sophisticated */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            
+            {/* Mantemos o overlay de círculos para design visual */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path 
                   fill="none" 

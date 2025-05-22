@@ -1,7 +1,11 @@
 
 import React from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const AboutSection: React.FC = () => {
+  // Em WordPress, essas URLs seriam campos ACF para imagens
+  const fernandaImage = '/lovable-uploads/6dfd343b-b9e1-49f7-b5fb-82f19bd4f46d.png';
+  
   return (
     <section id="about" className="section-padding bg-biodelle-offwhite">
       <div className="max-w-7xl mx-auto">
@@ -18,16 +22,36 @@ const AboutSection: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 mb-6">
               <div className="w-full sm:w-1/2">
-                <div className="aspect-square bg-biodelle-beige/50 rounded-lg mb-3 flex items-center justify-center">
-                  <span className="text-5xl text-biodelle-terracotta/30 font-garet">F</span>
+                {/* Imagem editável de Fernanda Silva */}
+                <div className="aspect-square bg-biodelle-beige/50 rounded-lg mb-3 flex items-center justify-center overflow-hidden">
+                  <Avatar className="w-full h-full rounded-lg">
+                    <AvatarImage
+                      src={fernandaImage}
+                      alt="Fernanda Silva"
+                      className="object-cover"
+                    />
+                    <AvatarFallback className="text-5xl text-biodelle-terracotta/30 font-garet">
+                      F
+                    </AvatarFallback>
+                  </Avatar>
                 </div>
                 <h4 className="text-lg font-medium">Fernanda Silva</h4>
                 <p className="text-sm text-biodelle-text/70">Farmacêutica CRF 12345</p>
               </div>
               
               <div className="w-full sm:w-1/2">
-                <div className="aspect-square bg-biodelle-beige/50 rounded-lg mb-3 flex items-center justify-center">
-                  <span className="text-5xl text-biodelle-moss/30 font-garet">R</span>
+                {/* Imagem editável de Roberto Santos */}
+                <div className="aspect-square bg-biodelle-beige/50 rounded-lg mb-3 flex items-center justify-center overflow-hidden">
+                  <Avatar className="w-full h-full rounded-lg">
+                    <AvatarImage
+                      src={fernandaImage} {/* Usando a mesma imagem temporariamente, no WordPress seria um campo diferente */}
+                      alt="Roberto Santos"
+                      className="object-cover"
+                    />
+                    <AvatarFallback className="text-5xl text-biodelle-moss/30 font-garet">
+                      R
+                    </AvatarFallback>
+                  </Avatar>
                 </div>
                 <h4 className="text-lg font-medium">Roberto Santos</h4>
                 <p className="text-sm text-biodelle-text/70">Farmacêutico CRF 67890</p>

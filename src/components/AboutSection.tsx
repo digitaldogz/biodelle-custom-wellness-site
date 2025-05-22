@@ -44,7 +44,7 @@ const AboutSection: React.FC = () => {
                 <div className="aspect-square bg-biodelle-beige/50 rounded-lg mb-3 flex items-center justify-center overflow-hidden">
                   <Avatar className="w-full h-full rounded-lg">
                     <AvatarImage
-                      src={fernandaImage} {/* Usando a mesma imagem temporariamente, no WordPress seria um campo diferente */}
+                      src={fernandaImage}
                       alt="Roberto Santos"
                       className="object-cover"
                     />

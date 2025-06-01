@@ -1,5 +1,5 @@
-
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 type Solution = {
@@ -7,6 +7,7 @@ type Solution = {
   image: string;
   title: string;
   description: string;
+  link: string;
 };
 
 const solutions: Solution[] = [
@@ -14,37 +15,43 @@ const solutions: Solution[] = [
     id: "anti-aging",
     image: "gradient-1",
     title: "Anti-Idade Avançado",
-    description: "Fórmulas com peptídeos, antioxidantes e ativos rejuvenescedores para uma pele firme e luminosa."
+    description: "Fórmulas com peptídeos, antioxidantes e ativos rejuvenescedores para uma pele firme e luminosa.",
+    link: "/anti-idade-avancado"
   },
   {
     id: "sports",
     image: "gradient-2",
     title: "Performance Esportiva Otimizada",
-    description: "Suplementos para aumento de energia, recuperação muscular e foco, adaptados à sua rotina de treinos."
+    description: "Suplementos para aumento de energia, recuperação muscular e foco, adaptados à sua rotina de treinos.",
+    link: "/performance-esportiva"
   },
   {
     id: "women-wellness",
     image: "gradient-3",
     title: "Bem-Estar Feminino",
-    description: "Fórmulas balanceadas para suporte durante a menopausa, TPM e equilíbrio hormonal."
+    description: "Fórmulas balanceadas para suporte durante a menopausa, TPM e equilíbrio hormonal.",
+    link: "/bem-estar-feminino"
   },
   {
     id: "hair-care",
     image: "gradient-4",
     title: "Linha Capilar Personalizada",
-    description: "Tratamentos específicos para queda, crescimento, densidade e brilho dos cabelos."
+    description: "Tratamentos específicos para queda, crescimento, densidade e brilho dos cabelos.",
+    link: "/linha-capilar"
   },
   {
     id: "immunity",
     image: "gradient-5",
     title: "Suporte à Imunidade",
-    description: "Combinações exclusivas de vitaminas, minerais e fitoquímicos para fortalecer suas defesas naturais."
+    description: "Combinações exclusivas de vitaminas, minerais e fitoquímicos para fortalecer suas defesas naturais.",
+    link: "/suporte-imunidade"
   },
   {
     id: "kids",
     image: "gradient-6",
     title: "Linha Kids Especial",
-    description: "Suplementos e cuidados adaptados às necessidades das crianças em crescimento."
+    description: "Suplementos e cuidados adaptados às necessidades das crianças em crescimento.",
+    link: "/linha-kids"
   }
 ];
 
@@ -72,13 +79,12 @@ const SolutionsSection: React.FC = () => {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - (carouselRef.current?.offsetLeft || 0);
-    const walk = (x - startX) * 2; // Scroll speed multiplier
+    const walk = (x - startX) * 2;
     if (carouselRef.current) {
       carouselRef.current.scrollLeft = scrollLeft - walk;
     }
   };
 
-  // Generate gradient styles for solution cards
   const getGradientStyle = (imageId: string) => {
     switch (imageId) {
       case 'gradient-1':
@@ -100,15 +106,15 @@ const SolutionsSection: React.FC = () => {
 
   const scrollToNext = () => {
     if (carouselRef.current) {
-      const slideWidth = 320; // Approximate width of each slide
-      carouselRef.current.scrollLeft += slideWidth + 16; // 16px for gap
+      const slideWidth = 320;
+      carouselRef.current.scrollLeft += slideWidth + 16;
     }
   };
 
   const scrollToPrev = () => {
     if (carouselRef.current) {
-      const slideWidth = 320; // Approximate width of each slide
-      carouselRef.current.scrollLeft -= slideWidth + 16; // 16px for gap
+      const slideWidth = 320;
+      carouselRef.current.scrollLeft -= slideWidth + 16;
     }
   };
 
@@ -157,7 +163,13 @@ const SolutionsSection: React.FC = () => {
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-inter font-medium mb-3 text-biodelle-text">{solution.title}</h3>
-                    <p className="text-biodelle-text/70 mb-4">{solution.description}</p>
+                    <p className="text-biodelle-text/70 mb-4 flex-grow">{solution.description}</p>
+                    <Link 
+                      to={solution.link}
+                      className="biodelle-btn-outline text-center mt-auto"
+                    >
+                      Saiba Mais
+                    </Link>
                   </div>
                 </div>
               </div>

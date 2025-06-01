@@ -42,9 +42,6 @@ const Header: React.FC = () => {
           <a href="#solutions" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
             Nossas Linhas
           </a>
-          <Link to="/blog" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
-            Blog
-          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -92,13 +89,6 @@ const Header: React.FC = () => {
             >
               Nossas Linhas
             </a>
-            <Link 
-              to="/blog" 
-              className="font-inter text-biodelle-text py-2 px-4 hover:bg-biodelle-offwhite rounded-md transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Blog
-            </Link>
           </nav>
         </div>
       )}

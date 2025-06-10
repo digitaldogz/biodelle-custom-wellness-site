@@ -17,6 +17,10 @@ const Footer: React.FC = () => {
     }
   };
 
+  const handleLegalPageClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="bg-biodelle-moss text-white py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -84,12 +88,12 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors flex items-center">
+                <a href="https://maps.google.com/search/?api=1&query=R.+Dr.+Correia,+446+-+Centro,+Irati+-+PR,+84500-021" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
                   </svg>
-                  Rua da Biodelle, 123, Cidade
+                  R. Dr. Correia, 446 - Centro, Irati - PR, 84500-021
                 </a>
               </li>
             </ul>
@@ -100,12 +104,20 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-medium mb-4">Legal & Social</h3>
             <ul className="space-y-2 mb-6">
               <li>
-                <Link to="/politica-privacidade" className="text-white/80 hover:text-white transition-colors">
+                <Link 
+                  to="/politica-privacidade" 
+                  onClick={handleLegalPageClick}
+                  className="text-white/80 hover:text-white transition-colors"
+                >
                   Política de Privacidade
                 </Link>
               </li>
               <li>
-                <Link to="/termos-uso" className="text-white/80 hover:text-white transition-colors">
+                <Link 
+                  to="/termos-uso"
+                  onClick={handleLegalPageClick}
+                  className="text-white/80 hover:text-white transition-colors"
+                >
                   Termos de Uso
                 </Link>
               </li>

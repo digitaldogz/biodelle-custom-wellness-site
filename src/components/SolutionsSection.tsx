@@ -118,6 +118,10 @@ const SolutionsSection: React.FC = () => {
     }
   };
 
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section id="solutions" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
@@ -166,6 +170,7 @@ const SolutionsSection: React.FC = () => {
                     <p className="text-biodelle-text/70 mb-4 flex-grow">{solution.description}</p>
                     <Link 
                       to={solution.link}
+                      onClick={handleLinkClick}
                       className="biodelle-btn-outline text-center mt-auto"
                     >
                       Saiba Mais

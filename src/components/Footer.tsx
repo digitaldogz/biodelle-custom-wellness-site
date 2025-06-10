@@ -1,8 +1,22 @@
 
 import React from 'react';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+  const handleNavClick = (sectionId: string) => {
+    // Se estivermos na página inicial, fazer scroll para a seção
+    if (window.location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Se estivermos em outra página, navegar para a home e depois fazer scroll
+      window.location.href = `/#${sectionId}`;
+    }
+  };
+
   return (
     <footer className="bg-biodelle-moss text-white py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -21,12 +35,30 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-medium mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">Início</a></li>
-              <li><a href="#about" className="text-white/80 hover:text-white transition-colors">Sobre Nós</a></li>
-              <li><a href="#solutions" className="text-white/80 hover:text-white transition-colors">Nossas Linhas</a></li>
-              <li><a href="#blog" className="text-white/80 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#quiz-section" className="text-white/80 hover:text-white transition-colors">Iniciar Quiz</a></li>
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">FAQ</a></li>
+              <li>
+                <button 
+                  onClick={() => handleNavClick('hero')}
+                  className="text-white/80 hover:text-white transition-colors text-left"
+                >
+                  Início
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavClick('about')}
+                  className="text-white/80 hover:text-white transition-colors text-left"
+                >
+                  Sobre Nós
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavClick('solutions')}
+                  className="text-white/80 hover:text-white transition-colors text-left"
+                >
+                  Nossas Linhas
+                </button>
+              </li>
             </ul>
           </div>
           
@@ -35,11 +67,11 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-medium mb-4">Contato</h3>
             <ul className="space-y-3">
               <li>
-                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors flex items-center">
+                <a href="https://wa.me/5542998477232" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
                   </svg>
-                  (00) 00000-0000
+                  (42) 99847-7232
                 </a>
               </li>
               <li>
@@ -67,8 +99,16 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-medium mb-4">Legal & Social</h3>
             <ul className="space-y-2 mb-6">
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">Política de Privacidade</a></li>
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">Termos de Uso</a></li>
+              <li>
+                <Link to="/politica-privacidade" className="text-white/80 hover:text-white transition-colors">
+                  Política de Privacidade
+                </Link>
+              </li>
+              <li>
+                <Link to="/termos-uso" className="text-white/80 hover:text-white transition-colors">
+                  Termos de Uso
+                </Link>
+              </li>
               <li className="text-white/60 text-sm">CNPJ: 00.000.000/0001-00</li>
               <li className="text-white/60 text-sm">Farm. Resp.: CRF 12345</li>
             </ul>

@@ -3,12 +3,12 @@ import React from 'react';
 import { Phone } from 'lucide-react';
 
 interface WhatsAppButtonProps {
-  phoneNumber: string;
+  phoneNumber?: string;
   message?: string;
 }
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ 
-  phoneNumber,
+  phoneNumber = "5542998477232",
   message = "Olá! Gostaria de mais informações sobre os produtos da Biodelle."
 }) => {
   const formattedPhoneNumber = phoneNumber.replace(/\D/g, '');

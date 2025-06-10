@@ -2,6 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,6 +22,29 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = (sectionId: string) => {
+    // Se estivermos na página inicial, fazer scroll para a seção
+    if (window.location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Se estivermos em outra página, navegar para a home e depois fazer scroll
+      window.location.href = `/#${sectionId}`;
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  const solutionsItems = [
+    { title: 'Anti-Idade Avançado', href: '/anti-idade-avancado' },
+    { title: 'Performance Esportiva', href: '/performance-esportiva' },
+    { title: 'Bem-Estar Feminino', href: '/bem-estar-feminino' },
+    { title: 'Linha Capilar', href: '/linha-capilar' },
+    { title: 'Suporte à Imunidade', href: '/suporte-imunidade' },
+    { title: 'Linha Kids Especial', href: '/linha-kids' },
+  ];
 
   return (
     <header 
@@ -33,15 +63,42 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
+          <button 
+            onClick={() => handleNavClick('hero')}
+            className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors"
+          >
             Início
-          </Link>
-          <a href="#about" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
+          </button>
+          <button 
+            onClick={() => handleNavClick('about')}
+            className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors"
+          >
             Sobre Nós
-          </a>
-          <a href="#solutions" className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors">
-            Nossas Linhas
-          </a>
+          </button>
+          
+          {/* Dropdown Menu for Nossas Linhas */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="font-inter text-biodelle-text hover:text-biodelle-terracotta transition-colors flex items-center">
+              Nossas Linhas
+              <ChevronDown className="ml-1 h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg">
+              <DropdownMenuItem onClick={() => handleNavClick('solutions')} className="hover:bg-biodelle-offwhite">
+                Ver Todas as Linhas
+              </DropdownMenuItem>
+              {solutionsItems.map((item) => (
+                <DropdownMenuItem key={item.href} asChild>
+                  <Link 
+                    to={item.href} 
+                    className="hover:bg-biodelle-offwhite"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.title}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -68,27 +125,34 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-md p-4 animate-fade-in">
           <nav className="flex flex-col space-y-4">
-            <Link 
-              to="/" 
-              className="font-inter text-biodelle-text py-2 px-4 hover:bg-biodelle-offwhite rounded-md transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
+            <button 
+              onClick={() => handleNavClick('hero')}
+              className="font-inter text-biodelle-text py-2 px-4 hover:bg-biodelle-offwhite rounded-md transition-colors text-left"
             >
               Início
-            </Link>
-            <a 
-              href="#about" 
-              className="font-inter text-biodelle-text py-2 px-4 hover:bg-biodelle-offwhite rounded-md transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => handleNavClick('about')}
+              className="font-inter text-biodelle-text py-2 px-4 hover:bg-biodelle-offwhite rounded-md transition-colors text-left"
             >
               Sobre Nós
-            </a>
-            <a 
-              href="#solutions" 
-              className="font-inter text-biodelle-text py-2 px-4 hover:bg-biodelle-offwhite rounded-md transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => handleNavClick('solutions')}
+              className="font-inter text-biodelle-text py-2 px-4 hover:bg-biodelle-offwhite rounded-md transition-colors text-left"
             >
               Nossas Linhas
-            </a>
+            </button>
+            {solutionsItems.map((item) => (
+              <Link 
+                key={item.href}
+                to={item.href}
+                className="font-inter text-biodelle-text py-2 px-6 hover:bg-biodelle-offwhite rounded-md transition-colors ml-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.title}
+              </Link>
+            ))}
           </nav>
         </div>
       )}

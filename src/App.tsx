@@ -11,6 +11,8 @@ import BemEstarFeminino from "./pages/BemEstarFeminino";
 import LinhaCapilar from "./pages/LinhaCapilar";
 import SuporteImunidade from "./pages/SuporteImunidade";
 import LinhaKids from "./pages/LinhaKids";
+import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
+import TermosUso from "./pages/TermosUso";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/linha-capilar" element={<LinhaCapilar />} />
           <Route path="/suporte-imunidade" element={<SuporteImunidade />} />
           <Route path="/linha-kids" element={<LinhaKids />} />
+          <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
+          <Route path="/termos-uso" element={<TermosUso />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

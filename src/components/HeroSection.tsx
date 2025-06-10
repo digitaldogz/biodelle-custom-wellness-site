@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
   const heroImage = '/lovable-uploads/f4d60e13-693f-4833-9667-753e45699a0e.png';
 
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-4 bg-gradient-to-b from-biodelle-offwhite to-white">
+    <section id="hero" className="pt-32 pb-20 md:pt-40 md:pb-28 px-4 bg-gradient-to-b from-biodelle-offwhite to-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="order-2 md:order-1 animate-fade-in">
           <h1 className="text-heading-1 text-biodelle-text">

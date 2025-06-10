@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="https://maps.google.com/search/?api=1&query=R.+Dr.+Correia,+446+-+Centro,+Irati+-+PR,+84500-021" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors flex items-center">
+                <a href="https://www.google.com/maps/place/Farm%C3%A1cia+de+Manipula%C3%A7%C3%A3o+Irati+-+Biodelle+Formulas+Personalizadas/@-25.4660366,-50.6550353,17z/data=!3m1!4b1!4m6!3m5!1s0x94e87fb043ab9029:0xbd779559b8a2b3bb!8m2!3d-25.4660415!4d-50.6524604!16s%2Fg%2F11wts1y1gs" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
                     <circle cx="12" cy="10" r="3"></circle>

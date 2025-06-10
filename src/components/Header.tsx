@@ -37,6 +37,11 @@ const Header: React.FC = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handlePageClick = () => {
+    window.scrollTo(0, 0);
+    setIsMobileMenuOpen(false);
+  };
+
   const solutionsItems = [
     { title: 'Anti-Idade Avançado', href: '/anti-idade-avancado' },
     { title: 'Performance Esportiva', href: '/performance-esportiva' },
@@ -91,7 +96,7 @@ const Header: React.FC = () => {
                   <Link 
                     to={item.href} 
                     className="hover:bg-biodelle-offwhite"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={handlePageClick}
                   >
                     {item.title}
                   </Link>
@@ -148,7 +153,7 @@ const Header: React.FC = () => {
                 key={item.href}
                 to={item.href}
                 className="font-inter text-biodelle-text py-2 px-6 hover:bg-biodelle-offwhite rounded-md transition-colors ml-4"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handlePageClick}
               >
                 {item.title}
               </Link>

@@ -13,42 +13,42 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    id: "vanessa",
-    name: "Vanessa Martins",
-    rating: 5,
-    comment: "Excelente produto! Recomendo muito, faz toda a diferença na minha rotina de cuidados. A qualidade é excepcional e os resultados são visíveis.",
-    productImage: "/lovable-uploads/vanessa-martins-foto-avaliacao.webp"
-  },
-  {
     id: "angela",
     name: "Angela Badluk",
     rating: 5,
-    comment: "Produto de altíssima qualidade! Superou todas as minhas expectativas. Estou muito satisfeita com os resultados obtidos.",
-    productImage: "/lovable-uploads/angela-badluk-foto-avaliacao.webp"
+    comment: "Gostaria de parabenizar Farmácia Biodelle pelo excelente atendimento e profissionalismo! A equipe é atenciosa, conta com estacionamento próprio e o ambiente é super agradável! Recomendo a todos que estão buscando a manipulação de medicamentos a valores acessíveis, com segurança e eficiência!",
+    productImage: "/lovable-uploads/16da13d4-37d6-45fd-bfe7-b1923b01c67a.png"
   },
   {
-    id: "maria",
-    name: "Maria Silva",
+    id: "natalia",
+    name: "Natalia Filakoski",
     rating: 5,
-    comment: "Simplesmente perfeito! A Biodelle realmente entende do que faz. Produtos personalizados que fazem toda a diferença na minha saúde e bem-estar."
+    comment: "Farmácia com o atendimento impecável, agilidade na entrega e fórmulas de altíssima qualidade! Parabéns pelo profissionalismo em cada detalhe! Recomendo!"
   },
   {
-    id: "fernanda",
-    name: "Fernanda Costa",
+    id: "camila",
+    name: "Camila Dambroski",
     rating: 5,
-    comment: "Estou impressionada com a qualidade dos produtos da Biodelle. Atendimento excepcional e produtos que realmente funcionam. Recomendo!"
+    comment: "Excelente atendimento, profissionais atenciosos e de confiança. Recebi meus medicamentos manipulados com qualidade, dentro do prazo e com todas as orientações necessárias."
   },
   {
-    id: "juliana",
-    name: "Juliana Santos",
+    id: "vanessa",
+    name: "Vanessa Martins",
     rating: 5,
-    comment: "A personalização dos produtos é incrível! Nunca vi nada igual. Sinto que finalmente encontrei uma empresa que se importa com as necessidades individuais."
+    comment: "Farmácia com ótimo atendimento, matéria prima de ótima procedência, profissionais com alto nível técnico na manipulação e conhecimento super índico meus manipulados sempre ficam personalizados e perfeitos!",
+    productImage: "/lovable-uploads/aa6b425d-04a2-465c-a348-7025df556be2.png"
   },
   {
-    id: "carla",
-    name: "Carla Oliveira",
+    id: "leandra",
+    name: "Leandra Pavlak",
     rating: 5,
-    comment: "Biodelle mudou minha vida! Os produtos são de excelente qualidade e o atendimento é impecável. Não troco por nada!"
+    comment: "Produtos de altíssima qualidade e atendimento excelente! Suuuper recomendo!"
+  },
+  {
+    id: "miriam",
+    name: "Miriam Minervini",
+    rating: 5,
+    comment: "Manipulações excelentes, manipulado em tempo ideal!!!"
   }
 ];
 

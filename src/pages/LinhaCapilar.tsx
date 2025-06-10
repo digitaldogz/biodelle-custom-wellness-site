@@ -1,8 +1,8 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 const LinhaCapilar = () => {
   return (
@@ -244,6 +244,7 @@ const LinhaCapilar = () => {
         </div>
       </section>
 
+      <TestimonialsSection />
       <Footer />
     </div>
   );

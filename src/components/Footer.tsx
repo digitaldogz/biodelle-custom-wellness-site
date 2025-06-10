@@ -1,19 +1,22 @@
 
 import React from 'react';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const handleNavClick = (sectionId: string) => {
-    // Se estivermos na página inicial, fazer scroll para a seção
-    if (window.location.pathname === '/') {
+    if (location.pathname === '/') {
+      // Se já estivermos na página inicial, fazer scroll direto
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Se estivermos em outra página, navegar para a home e depois fazer scroll
-      window.location.href = `/#${sectionId}`;
+      // Se estivermos em outra página, navegar para home com hash
+      navigate(`/#${sectionId}`);
     }
   };
 

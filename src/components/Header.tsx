@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,6 +13,8 @@ import { ChevronDown } from 'lucide-react';
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,16 +25,29 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Effect para fazer scroll após navegação para home
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+      const sectionId = location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   const handleNavClick = (sectionId: string) => {
-    // Se estivermos na página inicial, fazer scroll para a seção
-    if (window.location.pathname === '/') {
+    if (location.pathname === '/') {
+      // Se já estivermos na página inicial, fazer scroll direto
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Se estivermos em outra página, navegar para a home e depois fazer scroll
-      window.location.href = `/#${sectionId}`;
+      // Se estivermos em outra página, navegar para home com hash
+      navigate(`/#${sectionId}`);
     }
     setIsMobileMenuOpen(false);
   };
